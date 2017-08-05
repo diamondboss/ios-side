@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  DiamondBoss
+//
+//  Created by bonday012 on 17/4/7.
+//  Copyright © 2017年 bonday012. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+//放在预编译文件 这样其他文件就不用导入了
+#import "Define.h"
+#import "objc/runtime.h"
+
+//集成CocoaLumberjack
+#define publicKey @"a12637e0af4b6d0154c8ce07fafe0017:"
+#define MyAlertView(title, message)   [GXToast showText:title position:GXToastPositionCenter offset:0 duration:1];
+#define MyCoffeeAlertView(title, message) [GXToast showText:title position:GXToastPositionCenter offset:0 duration:2];
+#import "GlobalNavigationController.h"
+#import "REFrostedViewController.h"
+//QQ的左侧菜单风格
+
+#import "HYBNetworking.h"
+#import <UIImageView+WebCache.h>
+#import "UILabel+MyInit.h"
+
+#import "MBProgressHUD+Add.h"
+#import "LGFactory.h"
+/*定义答应等级*/
+#ifdef DEBUG
+//打印等级：verbose>Info>Warning>error
+#else
+#endif
+
+
+
+#endif
+
+#endif /* PrefixHeader_pch */
